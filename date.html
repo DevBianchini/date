@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bora sair?</title>
+  <link rel="shortcut icon" href="heart.png" type="image/x-icon">
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transform-style: preserve-3d;
+    text-align: center;
+}
+
+body {
+    background-color: #dfdfdf;
+    height: 97vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 32px;
+    color: rgba(236, 36, 36, 0.884);
+}
+
+h2 {
+    font-family: 32px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+button {
+    border: none;
+    padding: 1em 3em;
+    font-family: 32px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    background-color: #fff;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 100%;
+    background-color: rgba(236, 36, 36, 0.884);
+    border-radius: 8px;
+    transition: .5s;
+    opacity: 0;
+}
+
+button:hover::before {
+    width: 100%;
+    opacity: 1;
+}
+
+button:hover p {
+    color: #fff;
+}
+  </style>
+</head>
+
+<body>
+  <div>
+    <h1>Eu, você, shopping, semana que vem</h1>
+    <h2>Não to pedindo, to mandando kkkk</h2>
+    <h3>Bora?</h3>
+    <div class='buttons'>
+      <button>
+        <p>Sim</p>
+      </button>
+      <button>
+        <p>Não</p>
+      </button>
+    </div>
+  </div>
+
+
+  <script>
+    var moveButton = document.querySelector("button:nth-child(2)");
+    var containerDiv = document.querySelector("div");
+
+    var correctlyButton = document.querySelector("button:first-child");
+
+    moveButton.addEventListener("mouseenter", function () {
+      var vertical = Math.floor(Math.random() * 400);
+      var horizontal = Math.floor(Math.random() * 400);
+      moveButton.style.position = "absolute";
+      moveButton.style.left = vertical + "px";
+      moveButton.style.top = horizontal + "px";
+
+      // Diminuir a altura da div
+      containerDiv.style.height = (containerDiv.offsetHeight - 500) + "px"; // Subtrair 20 pixels da altura atual
+    });
+
+    correctlyButton.addEventListener("click", function () {
+      alert("Boaaa! Tá marcado então, não esquece em.");
+    });
+
+
+  </script>
+</body>
+
+</html>
