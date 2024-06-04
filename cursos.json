@@ -1,0 +1,37 @@
+{
+    "courses": [
+      {
+        "id": 1,
+        "name": "Curso de Programação",
+        "sections": [
+          {
+            "id": 1,
+            "title": "Introdução",
+            "content": "Bem-vindo ao curso de programação..."
+          },
+          {
+            "id": 2,
+            "title": "Primeiro Código",
+            "content": "Tente fazer seu primeiro código..."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Curso de HTML",
+        "sections": [
+          {
+            "id": 1,
+            "title": "Introdução ao HTML",
+            "content": "Bem-vindo ao curso de HTML..."
+          },
+          {
+            "id": 2,
+            "title": "Tags Básicas",
+            "content": "Vamos aprender sobre as tags básicas do HTML..."
+          }
+        ]
+      }
+    ]
+  }
+  
